@@ -441,6 +441,38 @@
   a.ytcard .tx{display:block;padding:14px 16px 16px;font-size:15px;line-height:1.8;}
   a.ytcard .tx b{display:block;font-size:16px;margin-bottom:4px;}
   a.ytcard .tx em{display:block;font-style:normal;color:var(--orange);font-size:13px;margin-top:6px;}
+
+  
+  .blk{background:#fff;border:1px solid var(--tan-line);border-radius:18px;box-shadow:var(--shadow);padding:22px 18px 10px;margin:22px 0;counter-increment:blk;}
+  #change{counter-reset:blk;}
+  #change .blk .sh{border-left:0;padding:0;margin:0 0 16px;font-size:19px;font-weight:700;}
+  #change .blk .sh::before{content:counter(blk,decimal-leading-zero);display:block;font-family:"Noto Serif JP",serif;font-weight:900;font-size:30px;line-height:1.1;color:var(--orange);margin-bottom:6px;}
+  .blk.plain{padding:20px 18px 8px;border-left:5px solid var(--orange);}
+  .blk.dk{background:var(--ink);border-color:var(--ink);}
+  .blk.dk .sh{color:#fff;}
+  .blk.dk .sh::before{color:#ffb98a;}
+  .blk.dk p.t{color:#efe6dd;}
+  .blk.dk .punch{margin:22px 0;}
+  .blk.dk .three li{box-shadow:none;color:var(--brown);}
+  .s p.t.call{background:var(--orange-soft);border-radius:12px;padding:12px 14px;font-weight:700;color:var(--ink);margin:16px 0 14px;}
+  .s p.t.big2{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--ink);text-align:center;margin:18px 0 16px;}
+  .s p.t.ask{font-family:"Noto Serif JP",serif;font-size:clamp(18px,5vw,21px);text-align:center;color:var(--ink);background:var(--cream);border-radius:12px;padding:14px 10px;margin:16px 0 14px;}
+  .s p.t.ask b{color:var(--orange-dark);}
+  .s p.t.lead2{font-family:"Noto Serif JP",serif;font-size:17.5px;font-weight:700;color:var(--ink);background:#fff;border-radius:14px;padding:16px 16px;box-shadow:var(--shadow);margin:26px 0 16px;}
+  .s p.t.push{text-align:center;font-size:16.5px;background:var(--ink);color:#fff;border-radius:14px;padding:18px 16px;margin:20px 0 22px;}
+  .s p.t.push b{color:var(--yellow);}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;}
+  .pills span{background:var(--cream);border:1px solid #f3cdb3;border-radius:999px;padding:7px 14px;font-size:15px;font-weight:700;color:var(--ink);line-height:1.5;}
+  .blk .voice{margin:6px 0 16px;}
+  .blk .quote{margin:6px 0 16px;box-shadow:none;background:var(--yellow-soft);border:2px solid var(--yellow);}
+  .three li{border:1px solid var(--tan-line);}
+  .three{counter-reset:th;}
+  #take ul.qcards li::before{content:"✓";}
+  #take .steps{background:#fff;border:1px solid var(--tan-line);border-radius:16px;padding:18px 16px 6px;box-shadow:var(--shadow);margin:14px 0 26px !important;}
+  #take .steps li{padding-bottom:12px;border-bottom:1px dashed var(--tan-line);}
+  #take .steps li:last-child{border-bottom:0;}
+  .letter .lc{font-family:"Noto Serif JP",serif;font-size:17.5px;line-height:1.8;color:var(--ink);background:var(--yellow-soft);border-radius:12px;padding:14px 14px;margin:20px 0 !important;}
+  .letter .lg{border-top:1px dashed var(--tan-line);padding-top:16px;}
 </style>
 </head>
 <body>
@@ -532,45 +564,56 @@
       <h2>なぜ今、<br>いいものだけでは<br>選ばれにくいのか</h2></div>
     <div class="quote">「いいものなら、<br>分かる人には伝わる」</div>
     <p class="c">オーガニックの仕事をしていると、<br>一度はそう思いますよね。<br>でも今は、それだけでは<br>伝わりにくくなっています。</p>
-    <h3 class="sh">大手のお店にも、<br>オーガニックが並ぶようになった</h3>
-    <p class="t">以前は、限られたお店でしか手に入らなかったオーガニック。</p>
-    <p class="t">今は大手のお店にも並んで、お客さまの選択肢が増えました。</p>
-    <p class="t">選べるのは、うれしいことです。</p>
-    <p class="t">ただ、売る側から見ると、値段で比べられる場面が増えています。</p>
-    <h3 class="sh">お客さまは、<br>雰囲気でも選んでいる</h3>
-    <p class="t">「ナチュラルっぽい」「オーガニックっぽい」「身体によさそう」</p>
-    <p class="t">そんな雰囲気で選ばれることもあります。</p>
-    <p class="t">でも、自然に見えることと、オーガニックの基準を満たしていることは、同じではありません。</p>
-    <p class="t">その違いが伝わらなければ、お客さまが値段で比べるのは、自然なことです。</p>
-    <h3 class="sh">いいものを扱うだけでは、<br>価値は伝わらない</h3>
-    <p class="t">オーガニックを大切にしている。商品にも、仕事にも、自信がある。</p>
-    <p class="t">それなのに「なぜ、こちらの方が高いんですか？」と聞かれて、言葉に詰まってしまう。</p>
-    <p class="t">思いはあるのに、選ばれにくくなった。</p>
-    <p class="t">そんな声が、私のところにも届いています。</p>
-    <p class="t">これから大切になるのは、値段で選んでもらうことではありません。</p>
-    <p class="t"><b>「なぜ、あなたから買いたいのか」。</b></p>
-    <p class="t">その理由に、お客さま自身が納得できることです。</p>
-    <h3 class="sh">価値観の合う人を引き寄せる<br>「引力」</h3>
-    <p class="t">無理に売り込まなくても、商品の価値やあなたの考えが伝わって、共感した人が選んでくれる。</p>
-    <p class="t">私は、その力を「引力」と呼んでいます。</p>
-    <div class="punch">引力は、<br>人を集めるテクニックでは<br>ありません。<br><span class="hl">「この人から選びたい」</span>と<br>思える理由を、<br>日々積み重ねることです。</div>
-    <p class="t">その理由を育てるのは、次の3つです。</p>
-    <ol class="three">
-      <li><b>① 正しい知識</b>何が分かっていて、何がまだ分かっていないのか。表示や認証の意味も根拠から理解して、自分の言葉で伝えられること。<br><small>→ 信頼の土台になります。</small></li>
-      <li><b>② 共感されるオーガニック思想</b>なぜオーガニックを選び、何を大切に事業をしているのか。その思いが、お客さまに届く言葉になっていること。<br><small>→「この人から選びたい」理由になります。</small></li>
-      <li><b>③ 仲間との共創</b>一人で抱え込まず、同じ方向を向く仲間と学び合い、それぞれの強みで新しい価値をつくっていくこと。<br><small>→ 学びと実践を続ける支えになります。</small></li>
-    </ol>
-    <p class="t">この3つを大切に、お客さまと長く信頼を育てていく。</p>
-    <p class="t">それが、値段だけで比べられないオーガニックビジネスへの道だと、私は考えています。</p>
-    <h3 class="sh">その第一歩で、<br>見落としやすいこと</h3>
-    <p class="t">長く学んできた方でも、足りない知識には、自分では気づきにくいものです。</p>
-    <p class="t">北海道・余市町の村田枝里さんも、そうでした。</p>
-    <p class="t">以前はオーガニックレストランを営んでいた村田さん。いまは有機農家として、ワインづくりや料理教室にも取り組んでいます。</p>
-    <p class="t">自分なりに、学んできたつもりだった。</p>
-    <p class="t">でも、IOBで学んでみて、こう話してくれました。</p>
-    <div class="quote">「本当多分1%、2%ぐらいしか<br>知らなかったんじゃないかな」<small>村田枝里さん（北海道・余市町）</small></div>
-    <p class="t">オーガニックへの思いも、学ぼうとする意欲もあった。</p>
-    <p class="t">それでも、まだ知らない世界があった。</p>
+    <div class="blk">
+      <h3 class="sh">大手のお店にも、<br>オーガニックが並ぶようになった</h3>
+      <p class="t">以前は、限られたお店でしか手に入らなかったオーガニック。</p>
+      <p class="t">今は大手のお店にも並んで、お客さまの選択肢が増えました。</p>
+      <p class="t">選べるのは、うれしいことです。</p>
+      <p class="t call">ただ、売る側から見ると、値段で比べられる場面が増えています。</p>
+    </div>
+    <div class="blk">
+      <h3 class="sh">お客さまは、<br>雰囲気でも選んでいる</h3>
+      <div class="pills"><span>「ナチュラルっぽい」</span><span>「オーガニックっぽい」</span><span>「身体によさそう」</span></div>
+      <p class="t">そんな雰囲気で選ばれることもあります。</p>
+      <p class="t">でも、自然に見えることと、オーガニックの基準を満たしていることは、同じではありません。</p>
+      <p class="t">つまり、より本質的で、こだわって作られたあなたの商品やサービスも、そうではない、オーガニックっぽく見られる商品も、お客さまには同じようにしか見えず、雰囲気で選ばれてしまうのです。</p>
+      <p class="t call">それを解決するのは、あなたが伝え切れるかどうかです。</p>
+    </div>
+    <div class="blk">
+      <h3 class="sh">いいものを扱うだけでは、<br>価値は伝わらない</h3>
+      <p class="t">オーガニックを大切にしている。商品にも、仕事にも、自信がある。</p>
+      <div class="voice"><i class="av"></i><div class="vb">それなのに「なぜ、こちらの方が高いんですか？」と聞かれて、言葉に詰まってしまう。</div></div>
+      <p class="t big2">思いはあるのに、選ばれにくくなった。</p>
+      <p class="t">そんな声が、私のところにも届いています。</p>
+      <p class="t">これから大切になるのは、値段で選んでもらうことではありません。</p>
+      <p class="t ask"><b>「なぜ、あなたから買いたいのか」。</b></p>
+      <p class="t">その理由に、お客さま自身が納得できることです。</p>
+    </div>
+    <div class="blk dk">
+      <h3 class="sh">価値観の合う人を引き寄せる<br>「引力」</h3>
+      <p class="t">無理に売り込まなくても、商品の価値やあなたの考えが伝わって、共感した人が選んでくれる。</p>
+      <p class="t">私は、その力を「引力」と呼んでいます。</p>
+      <div class="punch">引力は、<br>人を集めるテクニックでは<br>ありません。<br><span class="hl">「この人から選びたい」</span>と<br>思える理由を、<br>日々積み重ねることです。</div>
+      <p class="t">その理由を育てるのは、次の3つです。</p>
+      <ol class="three">
+        <li><b>① 正しい知識</b>何が分かっていて、何がまだ分かっていないのか。表示や認証の意味も根拠から理解して、自分の言葉で伝えられること。<br><small>→ 信頼の土台になります。</small></li>
+        <li><b>② 共感されるオーガニック思想</b>なぜオーガニックを選び、何を大切に事業をしているのか。その思いが、お客さまに届く言葉になっていること。<br><small>→「この人から選びたい」理由になります。</small></li>
+        <li><b>③ 仲間との共創</b>一人で抱え込まず、同じ方向を向く仲間と学び合い、それぞれの強みで新しい価値をつくっていくこと。<br><small>→ 学びと実践を続ける支えになります。</small></li>
+      </ol>
+      <p class="t">この3つを大切に、お客さまと長く信頼を育てていく。</p>
+      <p class="t">それが、値段だけで比べられないオーガニックビジネスへの道だと、私は考えています。</p>
+    </div>
+    <div class="blk">
+      <h3 class="sh">その第一歩で、<br>見落としやすいこと</h3>
+      <p class="t">長く学んできた方でも、足りない知識には、自分では気づきにくいものです。</p>
+      <p class="t">北海道・余市町の村田枝里さんも、そうでした。</p>
+      <p class="t">以前はオーガニックレストランを営んでいた村田さん。いまは有機農家として、ワインづくりや料理教室にも取り組んでいます。</p>
+      <p class="t">自分なりに、学んできたつもりだった。</p>
+      <p class="t">でも、IOBで学んでみて、こう話してくれました。</p>
+      <div class="quote">「本当多分1%、2%ぐらいしか<br>知らなかったんじゃないかな」<small>村田枝里さん（北海道・余市町）</small></div>
+      <p class="t">オーガニックへの思いも、学ぼうとする意欲もあった。</p>
+      <p class="t">それでも、まだ知らない世界があった。</p>
+    </div>
     <p class="c">そこに気づくことが、<br>新しい学びの第一歩になるのだと思います。</p>
     <p class="c">では、あなたなら、<br>こんな場面でどう答えますか？</p>
   </div>
@@ -659,11 +702,13 @@
       <li>仲間のいる場所に身を置く。</li>
       <li>オーガニックで食べていく。</li>
     </ul>
-    <p class="t">願いはあるのに、なかなか手がつけられない。その手前にあるのが、「覚悟」です。</p>
+    <p class="t lead2">願いはあるのに、なかなか手がつけられない。その手前にあるのが、「覚悟」です。</p>
     <p class="t">覚悟が決まらないのは、決めるための材料、つまり知識が、まだ手元にそろっていないからかもしれません。</p>
-    <p class="t">私は、この3時間を、<b>自分で自分の背中を押せる時間</b>にしたいと思って組んでいます。</p>
-    <p class="t">覚悟とは、無理に大きな決断をすることではありません。自分が大切にしたいことを確かめ、次に何をするかを、自分で選ぶこと。</p>
-    <p class="t">選んだことを実践して、また次を選ぶ。そしてその繰り返しの中で、結果がついてくるものだと私は思います。</p>
+    <p class="t push">私は、この3時間を、<b>自分で自分の背中を押せる時間</b>にしたいと思って組んでいます。</p>
+    <div class="blk plain">
+      <p class="t">覚悟とは、無理に大きな決断をすることではありません。自分が大切にしたいことを確かめ、次に何をするかを、自分で選ぶこと。</p>
+      <p class="t">選んだことを実践して、また次を選ぶ。そしてその繰り返しの中で、結果がついてくるものだと私は思います。</p>
+    </div>
     <p class="c">決めるのは、来てくださるあなたです。</p>
     <ol class="ncards">
       <li>聞かれて詰まっていた<b>理由</b>が、分かります</li>
@@ -682,8 +727,10 @@
       <li>ご自身の場合を詳しく話したい方は、その場で個別相談の日を決められます</li>
     </ol>
     <div class="punch">教育は、<br><span class="hl">すべての土台</span>です。</div>
-    <p class="t">自分自身が正しく理解していなければ、お客さまに、選ぶための知識を手渡すことはできません。</p>
-    <p class="t">オーガニックの企業を何百、何千と見てきて、はっきり言えることがあります。知識をきちんと伝えている会社には、お客さまがファンとして集まっていました。仲間ができ、社員が集まり、取引先も応援してくれていました。</p>
+    <div class="blk plain">
+      <p class="t">自分自身が正しく理解していなければ、お客さまに、選ぶための知識を手渡すことはできません。</p>
+      <p class="t">オーガニックの企業を何百、何千と見てきて、はっきり言えることがあります。知識をきちんと伝えている会社には、お客さまがファンとして集まっていました。仲間ができ、社員が集まり、取引先も応援してくれていました。</p>
+    </div>
     <p class="c"><b>だから私は、<br>あなたの先にいるお客さまにまで<br>知識が届くように、<br>スクールをやっています。</b></p>
     <p class="c">願いはあるのに、<br>なかなか手がつけられずにいる方。<br>ここに、その一歩目があります。<br>各回、定員5名までです。</p>
     <div class="ycs-cta" style="background:transparent;padding-top:0"><a class="cta" href="#apply" data-cta="take">日程を選んで申し込む</a></div>
@@ -698,9 +745,9 @@
       <div class="me"><img src="img/natsuko-portrait.jpg" alt="レムケなつこ"><span><b>レムケなつこ</b>オーガニックビジネス研究所（IOB）代表</span></div>
       <p>ドイツに暮らして約17年、オーガニック教育の仕事をしています。</p>
       <p>始まりは、青年海外協力隊で行った南米ボリビアでした。出稼ぎの人たちが、現代の奴隷のように働かされている。その現実を、見たのです。</p>
-      <p>日本に帰ってから、気づきました。その人たちが作ったサトウキビ、つまり白砂糖を、私も毎日使っていた。私も、あの現実に加わっていたのだと。</p>
+      <p class="lg">日本に帰ってから、気づきました。その人たちが作ったサトウキビ、つまり白砂糖を、私も毎日使っていた。私も、あの現実に加わっていたのだと。</p>
       <p>なんとかしたい。その一心で論文を読みあさり、出会ったのが「オーガニック」という仕組みでした。2009年にドイツへ渡り、ホーヘンハイム大学大学院で学びました。</p>
-      <p><b>オーガニックは、関わるすべての命が幸せでいられるための仕組みです。</b></p>
+      <p class="lc"><b>オーガニックは、関わるすべての命が幸せでいられるための仕組みです。</b></p>
       <p>だからこそ、伝える人に、根拠を持っていてほしい。伝える人が自信を持てた分だけ、オーガニックは広がっていくからです。</p>
       <div class="sign">レムケなつこ</div>
     </div>
