@@ -473,6 +473,14 @@
   #take .steps li:last-child{border-bottom:0;}
   .letter .lc{font-family:"Noto Serif JP",serif;font-size:17.5px;line-height:1.8;color:var(--ink);background:var(--yellow-soft);border-radius:12px;padding:14px 14px;margin:20px 0 !important;}
   .letter .lg{border-top:1px dashed var(--tan-line);padding-top:16px;}
+  
+  .pgrid{display:grid;gap:8px;margin:8px 0 34px;border-radius:18px;overflow:hidden;}
+  .pgrid.g2{grid-template-columns:1fr 1fr;}
+  .pgrid.g3{grid-template-columns:repeat(3,1fr);gap:4px;}
+  .pgrid img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:0;}
+  .pgrid.g2 img{border-radius:12px;}
+  .pgrid.g3 img{aspect-ratio:3/4;}
+  .letter .photo,.letter .pgrid{margin:16px 0 20px;}
 </style>
 </head>
 <body>
@@ -564,6 +572,7 @@
       <h2>なぜ今、<br>いいものだけでは<br>選ばれにくいのか</h2></div>
     <div class="quote">「いいものなら、<br>分かる人には伝わる」</div>
     <p class="c">オーガニックの仕事をしていると、<br>一度はそう思いますよね。<br>でも今は、それだけでは<br>伝わりにくくなっています。</p>
+    <div class="photo"><img src="img/p_barn.jpg" alt="ドイツの伝統的な農家の納屋と牧草地" loading="lazy"></div>
     <div class="blk">
       <h3 class="sh">大手のお店にも、<br>オーガニックが並ぶようになった</h3>
       <p class="t">以前は、限られたお店でしか手に入らなかったオーガニック。</p>
@@ -571,6 +580,7 @@
       <p class="t">選べるのは、うれしいことです。</p>
       <p class="t call">ただ、売る側から見ると、値段で比べられる場面が増えています。</p>
     </div>
+    <div class="pgrid g2"><img src="img/p_supermarket.jpg" alt="大手のお店のオーガニック売り場の通路" loading="lazy"><img src="img/p_market.jpg" alt="市場に並ぶ色とりどりの野菜" loading="lazy"></div>
     <div class="blk">
       <h3 class="sh">お客さまは、<br>雰囲気でも選んでいる</h3>
       <div class="pills"><span>「ナチュラルっぽい」</span><span>「オーガニックっぽい」</span><span>「身体によさそう」</span></div>
@@ -600,6 +610,7 @@
         <li><b>② 共感されるオーガニック思想</b>なぜオーガニックを選び、何を大切に事業をしているのか。その思いが、お客さまに届く言葉になっていること。<br><small>→「この人から選びたい」理由になります。</small></li>
         <li><b>③ 仲間との共創</b>一人で抱え込まず、同じ方向を向く仲間と学び合い、それぞれの強みで新しい価値をつくっていくこと。<br><small>→ 学びと実践を続ける支えになります。</small></li>
       </ol>
+    <div class="pgrid g3"><img src="img/p_barnclass.jpg" alt="ドイツの納屋で学ぶ講座の様子" loading="lazy"><img src="img/p_gardentalk.jpg" alt="畑の前で話を聞く仲間たち" loading="lazy"><img src="img/p_workshop.jpg" alt="仲間と一緒に手を動かすワークショップ" loading="lazy"></div>
       <p class="t">この3つを大切に、お客さまと長く信頼を育てていく。</p>
       <p class="t">それが、値段だけで比べられないオーガニックビジネスへの道だと、私は考えています。</p>
     </div>
@@ -611,6 +622,7 @@
       <p class="t">自分なりに、学んできたつもりだった。</p>
       <p class="t">でも、IOBで学んでみて、こう話してくれました。</p>
       <div class="quote">「本当多分1%、2%ぐらいしか<br>知らなかったんじゃないかな」<small>村田枝里さん（北海道・余市町）</small></div>
+    <div class="photo"><img src="img/p_hokkaido2024.jpg" alt="北海道の麦畑での集合写真" loading="lazy"></div>
       <p class="t">オーガニックへの思いも、学ぼうとする意欲もあった。</p>
       <p class="t">それでも、まだ知らない世界があった。</p>
     </div>
@@ -634,6 +646,7 @@
       <li>勉強も、してきた。</li>
       <li>なのに、一歩踏み込まれると、自信がなくなる。</li>
     </ul>
+    <div class="pgrid g2"><img src="img/p_berries.jpg" alt="畑で一緒に実を摘む仲間たち" loading="lazy"><img src="img/p_saladbar.jpg" alt="ホテルの朝食に並ぶ野菜のサラダ" loading="lazy"></div>
     <div class="punch">その場面が、<br><span class="hl">「あなたに聞いてよかった」</span><br>と言われる場面に<br>変わっていく。</div>
     <p class="c">その最初の一歩が、この3時間です。<br>詰まる理由を知って、<br><b>答え方の型を1つ、持って帰ってください。</b></p>
   </div>
@@ -686,6 +699,7 @@
     <div class="punch">知っていることと、<br><span class="hl">説明できること</span>は、違います。</div>
     <p class="c">足りない所が分かれば、<br>ちゃんと埋められます。</p>
     <p class="c">資格のためではなく、<br><b>明日、お客さまの前で使うために</b>学びます。</p>
+    <div class="photo"><img src="img/p_cafe.jpg" alt="カフェでくつろぐ仲間たちと壁の絵" loading="lazy"></div>
   </div>
 </section>
 
@@ -702,6 +716,7 @@
       <li>仲間のいる場所に身を置く。</li>
       <li>オーガニックで食べていく。</li>
     </ul>
+    <div class="photo"><img src="img/p_hills.jpg" alt="丘と村を見渡す景色" loading="lazy"></div>
     <p class="t lead2">願いはあるのに、なかなか手がつけられない。その手前にあるのが、「覚悟」です。</p>
     <p class="t">覚悟が決まらないのは、決めるための材料、つまり知識が、まだ手元にそろっていないからかもしれません。</p>
     <p class="t push">私は、この3時間を、<b>自分で自分の背中を押せる時間</b>にしたいと思って組んでいます。</p>
@@ -709,6 +724,7 @@
       <p class="t">覚悟とは、無理に大きな決断をすることではありません。自分が大切にしたいことを確かめ、次に何をするかを、自分で選ぶこと。</p>
       <p class="t">選んだことを実践して、また次を選ぶ。そしてその繰り返しの中で、結果がついてくるものだと私は思います。</p>
     </div>
+    <div class="photo"><img src="img/p_summit.jpg" alt="山の上から景色を見る仲間たち" loading="lazy"></div>
     <p class="c">決めるのは、来てくださるあなたです。</p>
     <ol class="ncards">
       <li>聞かれて詰まっていた<b>理由</b>が、分かります</li>
@@ -726,11 +742,13 @@
       <li>半年後の自分の場面を描く</li>
       <li>ご自身の場合を詳しく話したい方は、その場で個別相談の日を決められます</li>
     </ol>
+    <div class="pgrid g2"><img src="img/p_terrace.jpg" alt="テラスで笑い合う仲間たち" loading="lazy"><img src="img/p_dinner.jpg" alt="キャンドルの灯るテーブルで食事する仲間たち" loading="lazy"></div>
     <div class="punch">教育は、<br><span class="hl">すべての土台</span>です。</div>
     <div class="blk plain">
       <p class="t">自分自身が正しく理解していなければ、お客さまに、選ぶための知識を手渡すことはできません。</p>
       <p class="t">オーガニックの企業を何百、何千と見てきて、はっきり言えることがあります。知識をきちんと伝えている会社には、お客さまがファンとして集まっていました。仲間ができ、社員が集まり、取引先も応援してくれていました。</p>
     </div>
+    <div class="photo"><img src="img/p_lake.jpg" alt="湖のほとりで過ごす仲間たち" loading="lazy"></div>
     <p class="c"><b>だから私は、<br>あなたの先にいるお客さまにまで<br>知識が届くように、<br>スクールをやっています。</b></p>
     <p class="c">願いはあるのに、<br>なかなか手がつけられずにいる方。<br>ここに、その一歩目があります。<br>各回、定員5名までです。</p>
     <div class="ycs-cta" style="background:transparent;padding-top:0"><a class="cta" href="#apply" data-cta="take">日程を選んで申し込む</a></div>
@@ -744,10 +762,15 @@
     <div class="letter">
       <div class="me"><img src="img/natsuko-portrait.jpg" alt="レムケなつこ"><span><b>レムケなつこ</b>オーガニックビジネス研究所（IOB）代表</span></div>
       <p>ドイツに暮らして約17年、オーガニック教育の仕事をしています。</p>
+    <div class="photo"><img src="img/p_meadow.jpg" alt="ドイツの農家の牧草地で話を聞く参加者" loading="lazy"></div>
       <p>始まりは、青年海外協力隊で行った南米ボリビアでした。出稼ぎの人たちが、現代の奴隷のように働かされている。その現実を、見たのです。</p>
+    <div class="pgrid g2"><img src="img/p_bolivia2.jpg" alt="ボリビアの荒れた土地に暮らす人" loading="lazy"><img src="img/p_bolivia5.jpg" alt="サトウキビ畑で働く人" loading="lazy"></div>
       <p class="lg">日本に帰ってから、気づきました。その人たちが作ったサトウキビ、つまり白砂糖を、私も毎日使っていた。私も、あの現実に加わっていたのだと。</p>
-      <p>なんとかしたい。その一心で論文を読みあさり、出会ったのが「オーガニック」という仕組みでした。2009年にドイツへ渡り、ホーヘンハイム大学大学院で学びました。</p>
+    <div class="photo"><img src="img/p_bolivia1.jpg" alt="サトウキビの刈り取りの合間に休む人たち" loading="lazy"></div>
+      <p>なんとかしたい。その一心で論文を読みあさり、出会ったのが「オーガニック」という仕組みでした。2009年にドイツへ渡り、大学院で学びました。</p>
+    <div class="photo"><img src="img/p_house.jpg" alt="ドイツの伝統的な農家の家" loading="lazy"></div>
       <p class="lc"><b>オーガニックは、関わるすべての命が幸せでいられるための仕組みです。</b></p>
+    <div class="photo"><img src="img/p_smiles.jpg" alt="芝生に寝転んで笑顔を寄せ合う仲間たち" loading="lazy"></div>
       <p>だからこそ、伝える人に、根拠を持っていてほしい。伝える人が自信を持てた分だけ、オーガニックは広がっていくからです。</p>
       <div class="sign">レムケなつこ</div>
     </div>
