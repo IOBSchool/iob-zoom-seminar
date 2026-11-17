@@ -440,12 +440,12 @@
   .ytwrap{margin:6px 0 22px;}
   .ytlead{font-family:"Noto Serif JP",serif;font-weight:700;font-size:clamp(18px,5vw,21px);line-height:1.6;text-align:center;margin:0 0 10px;color:var(--ink);}
   .ytg{display:inline-block;background:var(--orange);color:#fff;font-weight:700;font-size:14px;border-radius:999px;padding:4px 14px;margin:18px 0 10px;}
-  .ytlist{display:grid;gap:10px;}
-  button.ytm{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:42% 1fr;gap:12px;align-items:start;background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);padding:0 12px 0 0;width:100%;}
-  button.ytm .th{position:relative;display:block;align-self:stretch;}
-  button.ytm .th img{display:block;width:100%;height:100%;min-height:96px;object-fit:cover;}
-  button.ytm .th::after{content:"";position:absolute;left:50%;top:50%;width:40px;height:28px;margin:-14px 0 0 -20px;border-radius:8px;background:rgba(220,0,0,.88) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/18px no-repeat;}
-  button.ytm .tx{display:block;padding:10px 0;font-size:13px;line-height:1.7;color:var(--ink);}
+  .ytlist{display:grid;gap:16px;margin-bottom:16px;}
+  button.ytm{all:unset;box-sizing:border-box;cursor:pointer;display:block;background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);padding:0;width:100%;}
+  button.ytm .th{position:relative;display:block;}
+  button.ytm .th img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;}
+  button.ytm .th::after{content:"";position:absolute;left:50%;top:50%;width:56px;height:40px;margin:-20px 0 0 -28px;border-radius:10px;background:rgba(220,0,0,.88) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/18px no-repeat;}
+  button.ytm .tx{display:block;padding:12px 16px 16px;font-size:14px;line-height:1.75;color:var(--ink);}
   button.ytm .tx b{display:block;font-size:15px;}
   button.ytm .tx i{display:block;font-style:normal;font-size:12px;color:var(--brown-mid);margin-bottom:4px;}
   .ytnote{font-size:12px;color:var(--brown-mid);margin:10px 0 0;}
@@ -758,25 +758,17 @@
         <button type="button" class="ytm" data-yt="OlyG-AKINbQ" data-cta="yt-murata"><span class="th"><img src="img/yt_murata.jpg" alt="村田枝里さんの対談動画" loading="lazy"></span><span class="tx"><b>村田枝里さん</b><i>生産者（ワインぶどう・野菜・家畜）／飲食・料理教室</i>「知識があるってことは、たくさんの選択肢の中から自分の人生を決めていける」</span></button>
       </div>
       <p class="ytlead">お店、商品づくり、教室。<br>あなたに近い人の話から。</p>
-      <p class="ytg">お店を営む人</p>
       <div class="ytlist">
         <button type="button" class="ytm" data-yt="ah6qDS44X-Q" data-cta="yt-y01"><span class="th"><img src="img/yt_y01.jpg" alt="川田むつみさんの対談動画" loading="lazy"></span><span class="tx"><b>川田むつみさん</b><i>小売（オーガニックスーパー経営・取締役）</i>「ＩＯＢでの学びがなければ、いまの私の成功はありえなかったと断言できます。」</span></button>
-        <button type="button" class="ytm" data-yt="TpcaIA6MpjQ" data-cta="yt-y08"><span class="th"><img src="img/yt_y08.jpg" alt="野田寿美子さんの対談動画" loading="lazy"></span><span class="tx"><b>野田寿美子さん</b><i>小売・飲食（オフィス街のオーガニック店）／美容・健康の経営者</i>「専門家コースを受けてなかったらお店は絶対してなかったですね」</span></button>
-        <button type="button" class="ytm" data-yt="GYL2LT5ecak" data-cta="yt-y07"><span class="th"><img src="img/yt_y07.jpg" alt="山田愛実さんの対談動画" loading="lazy"></span><span class="tx"><b>山田愛実さん</b><i>小売・飲食（オーガニックサロン＋スーパーカフェ）／講師</i>「その苦手意識が外れてなんか手放せてなんかもうそこに飛び込んだらなんか解放された感があった」</span></button>
-        <button type="button" class="ytm" data-yt="PQUvv2M6yZY" data-cta="yt-y11"><span class="th"><img src="img/yt_y11.jpg" alt="矢野浩道さんの対談動画" loading="lazy"></span><span class="tx"><b>矢野浩道さん</b><i>小売（オーガニックスーパーのスタッフ）</i>「疑いから確信に変わってまた勉強することによって本当に自分に自信がついたり」</span></button>
-        <button type="button" class="ytm" data-yt="OChOwSxzXCM" data-cta="yt-y02"><span class="th"><img src="img/yt_y02.jpg" alt="猿田一生さんの対談動画" loading="lazy"></span><span class="tx"><b>猿田一生さん</b><i>美容室オーナー・日本サステナブルサロン協会 代表理事</i>「「ずっと、こんなサロンを探していた」と涙するお客様の姿を見たりしたときには、努力が報われたと感じました。」</span></button>
-      </div>
-      <p class="ytg">商品・食べものをつくる人</p>
-      <div class="ytlist">
         <button type="button" class="ytm" data-yt="QDMWgjHvRaU" data-cta="yt-y10"><span class="th"><img src="img/yt_y10.jpg" alt="久松麻紀さんの対談動画" loading="lazy"></span><span class="tx"><b>久松麻紀さん</b><i>メーカー/商品開発（野生植物原料の健康食品・会社代表）</i>「オーガニックっていう考え方とセットで商品の説明ができるので…しっかりとやっぱりもう自信を持ってお話できる」</span></button>
-        <button type="button" class="ytm" data-yt="l-K9DIoWZYg" data-cta="yt-y09"><span class="th"><img src="img/yt_y09.jpg" alt="柳田夕希さんの対談動画" loading="lazy"></span><span class="tx"><b>柳田夕希さん</b><i>メーカー/商品開発（フルオーガニックの酵素ドリンク）／ピラティス講師</i>「入ってなかったら本当にビジネスも成り立たないですし」</span></button>
         <button type="button" class="ytm" data-yt="g5SsI_LQb3Q" data-cta="yt-y03"><span class="th"><img src="img/yt_y03.jpg" alt="田中優介さんの対談動画" loading="lazy"></span><span class="tx"><b>田中優介さん</b><i>生産者（自然農の米づくり・農業法人を設立中）／経営コンサル</i>「だからこの選択をしたんだっていうことが説明できるようになったてのはすごい大きな成果だと思ってます」</span></button>
-        <button type="button" class="ytm" data-yt="vLFB0WKrulA" data-cta="yt-y04"><span class="th"><img src="img/yt_y04.jpg" alt="古谷栄樹さんの対談動画" loading="lazy"></span><span class="tx"><b>古谷栄樹さん</b><i>生産者（愛媛で農業・大阪で販売）</i>「その大阪で今活動してるスクールの方に買っていただいたりとか、取り扱っていただいたりと」</span></button>
-      </div>
-      <p class="ytg">教える・伝える人</p>
-      <div class="ytlist">
         <button type="button" class="ytm" data-yt="hBM6TNmnu30" data-cta="yt-y13"><span class="th"><img src="img/yt_y13.jpg" alt="ビルケルト恵さんの対談動画" loading="lazy"></span><span class="tx"><b>ビルケルト恵さん</b><i>講師（ドイツで味噌づくり講座）＋メーカー/商品開発</i>「資格を得たことでさらにもっとこう飛躍的にあのドイツでも日本でも仕事ができる場所が広がった」</span></button>
+        <button type="button" class="ytm" data-yt="TpcaIA6MpjQ" data-cta="yt-y08"><span class="th"><img src="img/yt_y08.jpg" alt="野田寿美子さんの対談動画" loading="lazy"></span><span class="tx"><b>野田寿美子さん</b><i>小売・飲食（オフィス街のオーガニック店）／美容・健康の経営者</i>「専門家コースを受けてなかったらお店は絶対してなかったですね」</span></button>
+        <button type="button" class="ytm" data-yt="l-K9DIoWZYg" data-cta="yt-y09"><span class="th"><img src="img/yt_y09.jpg" alt="柳田夕希さんの対談動画" loading="lazy"></span><span class="tx"><b>柳田夕希さん</b><i>メーカー/商品開発（フルオーガニックの酵素ドリンク）／ピラティス講師</i>「入ってなかったら本当にビジネスも成り立たないですし」</span></button>
+        <button type="button" class="ytm" data-yt="vLFB0WKrulA" data-cta="yt-y04"><span class="th"><img src="img/yt_y04.jpg" alt="古谷栄樹さんの対談動画" loading="lazy"></span><span class="tx"><b>古谷栄樹さん</b><i>生産者（愛媛で農業・大阪で販売）</i>「その大阪で今活動してるスクールの方に買っていただいたりとか、取り扱っていただいたりと」</span></button>
         <button type="button" class="ytm" data-yt="UYamCvGDoW0" data-cta="yt-y05"><span class="th"><img src="img/yt_y05.jpg" alt="上鶴恵子さんの対談動画" loading="lazy"></span><span class="tx"><b>上鶴恵子さん</b><i>小売（自然食品店）／講師</i>「ちゃんと伝えればこんなに理解者が増えるんだっていうことだった」</span></button>
+        <button type="button" class="ytm" data-yt="OChOwSxzXCM" data-cta="yt-y02"><span class="th"><img src="img/yt_y02.jpg" alt="猿田一生さんの対談動画" loading="lazy"></span><span class="tx"><b>猿田一生さん</b><i>美容室オーナー・日本サステナブルサロン協会 代表理事</i>「「ずっと、こんなサロンを探していた」と涙するお客様の姿を見たりしたときには、努力が報われたと感じました。」</span></button>
+        <button type="button" class="ytm" data-yt="GYL2LT5ecak" data-cta="yt-y07"><span class="th"><img src="img/yt_y07.jpg" alt="山田愛実さんの対談動画" loading="lazy"></span><span class="tx"><b>山田愛実さん</b><i>小売・飲食（オーガニックサロン＋スーパーカフェ）／講師</i>「その苦手意識が外れてなんか手放せてなんかもうそこに飛び込んだらなんか解放された感があった」</span></button>
         <button type="button" class="ytm" data-yt="W8xM_UIhfYI" data-cta="yt-y06"><span class="th"><img src="img/yt_y06.jpg" alt="森奈央さんの対談動画" loading="lazy"></span><span class="tx"><b>森奈央さん</b><i>小売（量り売りのオーガニック店）／講師</i>「あ、私も何かできることで協力をしたいですっていうことでお声をいただいてます」</span></button>
       </div>
       <p class="ytnote">※ご本人の言葉を、そのまま載せています（川田さん・猿田さんは著書の体験談から）。</p>
