@@ -10,6 +10,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet">
+<!--
+  ■ ZOOMセミナー（12/6・12/16 ※2026-11-17本人決定で11/24・12/13から延期）申込ページ  作成: 2026-11-11（本人「今日はLP作りにフォーカス」）
+  ■ 本文の正本＝Doc「11/24体験セミナー｜申込ページとメール3通（2本を見比べる）」1uL8J2Q_T51g72MabaXnt_XTzVHSeLKAdq-AgzjowOeI のA版（点検係→コピー係）
+     変更点：事前動画の段は削除（動画は間に合わない）／Meet→Zoom（11/11からZoom）／2回を選べる申込欄／締切は日付ごとにカードへ
+  ■ デザインの土台＝school-portal/drill-apply（LPデザインの型_正本）。FVは写真を背景に敷かず見出しの下に置く（11/10本人ルール）
+  ■ 受付GAS＝ドリル申込受付_2026 の同じプロジェクトに sem_track / sem_apply を追加（automation/gas_drill_apply.gs）
+  ■ 計測：view / cta / form_start / scroll。?src=○○で流入元、?fv=1/2/3で見出し案。自分の確認は ?src=me
+  ■ 写真：img/natsuko-portrait.jpg・img/kyoudou-meet.jpg（自前）／img/stock は Unsplash（drill-apply と同じもの）
+    <div class="pgrid g3"><img src="img/p_piano.jpg" alt="ピアノのある部屋で集まった仲間たち" loading="lazy"><img src="img/p_cooking.jpg" alt="みんなで料理をするワークショップ" loading="lazy"><img src="img/p_artroom.jpg" alt="アトリエで制作を楽しむ参加者" loading="lazy"></div>
+-->
 <style>
   :root{
     color-scheme: light;
@@ -30,7 +40,7 @@
   a{color:var(--blue-dark);}
   .wrap{max-width:820px;margin:0 auto;padding:0 18px;}
 
-  
+  /* ===== FV ===== */
   .fv{position:relative;background:radial-gradient(120% 90% at 85% 10%,#4a3022 0%,var(--ink) 55%,#1c120c 100%);color:#fff;overflow:hidden;}
   .fv::after{content:"";position:absolute;right:-120px;bottom:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(232,116,60,.35),rgba(232,116,60,0) 70%);pointer-events:none;}
   .fv-in{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:calc(26px + env(safe-area-inset-top)) 20px 40px;display:grid;grid-template-columns:1fr;gap:22px;align-items:center;}
@@ -63,7 +73,7 @@
     .fv-photo img{aspect-ratio:1/1;}
   }
 
-  
+  /* ===== sections ===== */
   .sec{padding:44px 0;}
   .sec + .sec{padding-top:8px;}
   .band{background:var(--cream2);border-top:1px solid var(--tan-line);border-bottom:1px solid var(--tan-line);padding:44px 0;margin:28px 0;}
@@ -185,7 +195,7 @@
   .s .nw{white-space:nowrap;}
   .s p,.s li,.s .ans,.mw,.mo-t,.mq-s,.mb{text-wrap:pretty;}
   .affirm{font-family:"Noto Serif JP",serif;font-size:25px;font-weight:900;line-height:1.6;text-align:center;color:var(--ink);margin:6px 0 22px;}
-  
+  /* ミニドリル（2026-11-02夜 本人「実際に回答して答えと解説が見える」） */
   .mini{margin:22px 0;}
   .mini-h{text-align:center;}
   .mini-lead{font-family:"Noto Serif JP",serif;font-size:20px;font-weight:900;color:var(--ink);margin:4px 0 6px;}
@@ -268,7 +278,7 @@
   footer{border-top:1px solid var(--tan-line);text-align:center;padding:26px 18px 40px;color:var(--brown-mid);font-size:12px;}
   @media(max-width:600px){ .card{padding:18px 16px;} .letter{padding:22px 18px;} }
 
-  
+  /* ===== 本文 v2（2026-11-02・LPデザインの型_正本 v1） ===== */
   body{background:#fff;}
   .s{padding:64px 0;}
   .s-white{background:#fff;}
@@ -365,7 +375,7 @@
   .shot img{display:block;width:100%;}
   budoux-ja{display:inline;line-break:strict;}
 
-  
+  /* FV（2026-11-02 本人決定：F案の写真＋見出し案5） */
   .fv{background:#2b1d14;}
   .fv::before{content:"";position:absolute;top:0;right:-60px;width:330px;height:430px;background:url(img/natsuko-portrait.jpg) 30% 10%/auto 100% no-repeat;filter:grayscale(1) sepia(.6) brightness(.85);mix-blend-mode:luminosity;opacity:.55;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%),linear-gradient(180deg,#000 60%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect;pointer-events:none;}
   .fv-in{display:block;padding-top:calc(70px + env(safe-area-inset-top));}
@@ -384,7 +394,7 @@
 
   .today{margin-top:10px !important;font-weight:700;color:var(--orange-dark) !important;font-size:14.5px;}
 
-  
+  /* FV：YCSセミナーLP型（2026-11-11 本人指示） */
   .ycs{background:#fff;color:#2b1d14;text-align:center;}
   .ycs-in{padding:calc(22px + env(safe-area-inset-top)) 16px 22px;background:linear-gradient(180deg,#fff 0%,#fbf6ea 100%);}
   .ycs-to{display:inline-block;font-family:"Noto Serif JP",serif;font-weight:900;font-size:17px;letter-spacing:.06em;background:#ffe066;border-radius:8px;padding:6px 16px;margin-bottom:16px;}
@@ -394,14 +404,14 @@
   .ycs h1 .q{background:linear-gradient(transparent 60%,#ffe066 60%);}
   .ycs h1 .nw{white-space:nowrap;}
   .ycs-by{margin:16px 0 4px;font-size:clamp(12px,3.5vw,15px);font-weight:700;color:#6b5544;border-top:1px solid #e3d8c4;border-bottom:1px solid #e3d8c4;display:inline-block;padding:2px 10px;}
-  .ycs-big{font-size:clamp(18px,5.2vw,26px);font-weight:900;line-height:1.6;margin:8px 0 0;color:#2b1d14;}
+  .ycs-big{font-size:clamp(12px,3.4vw,17px);font-weight:900;line-height:1.6;margin:8px 0 0;color:#2b1d14;}
   .ycs-big b{color:#cf5f2b;}
   .ycs-band{background:linear-gradient(180deg,#e8743c,#cf5f2b);color:#fff;padding:20px 16px 18px;}
   .ycs-pill{display:inline-flex;align-items:center;gap:8px;background:#ffe066;color:#2b1d14;font-weight:900;font-size:16px;border-radius:999px;padding:5px 20px;}
   .ycs-pill i{display:inline-block;width:18px;height:13px;background:#2d8cff;border-radius:3px;position:relative;}
   .ycs-pill i::after{content:"";position:absolute;right:-6px;top:3px;border:4px solid transparent;border-left:6px solid #2d8cff;}
   .ycs-sub{margin:12px 0 2px;font-size:14px;font-weight:700;color:#fff;}
-  .ycs-title{font-family:"Noto Serif JP",serif;font-weight:900;font-size:clamp(19px,5.6vw,30px);line-height:1.55;color:#fff;margin:0;}
+  .ycs-title{font-family:"Noto Serif JP",serif;font-weight:900;font-size:clamp(19px,5.6vw,30px);line-height:1.55;color:#fff;margin:16px 0 0;}
   .ycs-when{margin:10px 0 0;font-size:14px;color:#fff3ea;}
   .ycs-when b{color:#ffe066;font-size:16px;}
   .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#2b1d14;}
@@ -410,7 +420,7 @@
   .ycs-cta{padding:18px 16px 26px;background:#fff;}
   .ycs-cta .cta{margin:0 auto;}
   #apply{padding-top:30px;}
-  
+  /* ===== 体験セミナー用の追加 ===== */
   .fv .chips{margin-top:16px;}
   .dates{display:grid;gap:12px;margin:8px 0 26px;}
   .dcard{background:#fff;border:2px solid var(--orange);border-radius:16px;padding:18px 18px 14px;}
@@ -426,7 +436,25 @@
   .radio input{margin-top:6px;accent-color:var(--orange);}
   .radio small{display:block;font-size:12.5px;color:var(--brown-mid);}
   .vcap{font-size:13px !important;color:var(--brown-mid) !important;background:var(--cream);border-radius:10px;padding:10px 12px;margin:0 0 18px !important;}
-  
+  /* 受講生の動画一覧（2026-11-17・タップで再生） */
+  .ytwrap{margin:6px 0 22px;}
+  .ytlead{font-family:"Noto Serif JP",serif;font-weight:700;font-size:clamp(18px,5vw,21px);line-height:1.6;text-align:center;margin:0 0 10px;color:var(--ink);}
+  .ytg{display:inline-block;background:var(--orange);color:#fff;font-weight:700;font-size:14px;border-radius:999px;padding:4px 14px;margin:18px 0 10px;}
+  .ytlist{display:grid;gap:10px;}
+  button.ytm{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:42% 1fr;gap:12px;align-items:start;background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);padding:0 12px 0 0;width:100%;}
+  button.ytm .th{position:relative;display:block;align-self:stretch;}
+  button.ytm .th img{display:block;width:100%;height:100%;min-height:96px;object-fit:cover;}
+  button.ytm .th::after{content:"";position:absolute;left:50%;top:50%;width:40px;height:28px;margin:-14px 0 0 -20px;border-radius:8px;background:rgba(220,0,0,.88) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/18px no-repeat;}
+  button.ytm .tx{display:block;padding:10px 0;font-size:13px;line-height:1.7;color:var(--ink);}
+  button.ytm .tx b{display:block;font-size:15px;}
+  button.ytm .tx i{display:block;font-style:normal;font-size:12px;color:var(--brown-mid);margin-bottom:4px;}
+  .ytnote{font-size:12px;color:var(--brown-mid);margin:10px 0 0;}
+  .ytmodal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;z-index:9999;padding:16px;}
+  .ytmodal.on{display:flex;}
+  .ytmodal .box{width:100%;max-width:820px;aspect-ratio:16/9;background:#000;}
+  .ytmodal iframe{width:100%;height:100%;border:0;display:block;}
+  .ytmodal .x{position:absolute;top:12px;right:14px;background:#fff;color:#000;border:0;border-radius:999px;width:40px;height:40px;font-size:22px;cursor:pointer;}
+  /* 常識段・村田さん動画カード（2026-11-11） */
   .s .sh{font-family:"Noto Serif JP",serif;font-size:18px;line-height:1.6;color:var(--ink);border-left:5px solid var(--orange);padding:2px 0 2px 12px;margin:38px 0 14px;}
   .s p.t{margin:0 0 12px;font-size:15.5px;line-height:1.95;}
   .three{list-style:none;display:grid;gap:12px;margin:18px 0 22px;padding:0;}
@@ -442,7 +470,7 @@
   a.ytcard .tx b{display:block;font-size:16px;margin-bottom:4px;}
   a.ytcard .tx em{display:block;font-style:normal;color:var(--orange);font-size:13px;margin-top:6px;}
 
-  
+  /* ===== ずらっと並ぶ対策（2026-11-16 本人「文章がざーっと並んでる印象で読めない」）：1ブロック1メッセージ ===== */
   .blk{background:#fff;border:1px solid var(--tan-line);border-radius:18px;box-shadow:var(--shadow);padding:22px 18px 10px;margin:22px 0;counter-increment:blk;}
   #change{counter-reset:blk;}
   #change .blk .sh{border-left:0;padding:0;margin:0 0 16px;font-size:19px;font-weight:700;}
@@ -473,7 +501,7 @@
   #take .steps li:last-child{border-bottom:0;}
   .letter .lc{font-family:"Noto Serif JP",serif;font-size:17.5px;line-height:1.8;color:var(--ink);background:var(--yellow-soft);border-radius:12px;padding:14px 14px;margin:20px 0 !important;}
   .letter .lg{border-top:1px dashed var(--tan-line);padding-top:16px;}
-  
+  /* ---- 写真の組み（2枚並び・3枚の帯） ---- */
   .pgrid{display:grid;gap:8px;margin:8px 0 34px;border-radius:18px;overflow:hidden;}
   .pgrid.g2{grid-template-columns:1fr 1fr;}
   .pgrid.g3{grid-template-columns:repeat(3,1fr);gap:4px;}
@@ -482,7 +510,7 @@
   .pgrid.g3 img{aspect-ratio:3/4;}
   .letter .photo,.letter .pgrid{margin:16px 0 20px;}
 
-  
+  /* ===== 中野LP型 全面作り直し（2026-11-16） ===== */
   .ycs-fee{margin:6px 0 0;font-size:13.5px;color:#fff3ea;line-height:1.7;}
   .cap2{font-size:12.5px !important;color:var(--brown-mid) !important;text-align:center;margin:-14px 0 26px !important;line-height:1.7 !important;}
   #empathy{border-top:1px solid var(--tan-line);}
@@ -504,6 +532,7 @@
 </head>
 <body>
 
+<!-- ===== FV（2026-11-16 中野LP型：メインコピー・FV画像は据え置き、サブ・日時・参加費は完成稿どおり） ===== -->
 <header class="ycs">
   <div class="ycs-in">
     <div class="ycs-to">オーガニック起業家のあなたへ</div>
@@ -527,10 +556,11 @@
   <div class="ycs-cta"><a class="cta" href="#apply" data-cta="fv">参加する日を選んで、申し込む</a></div>
 </header>
 
+<!-- ===== 申込欄（フォーム本体は据え置き） ===== -->
 <section class="sec" id="apply">
   <div class="wrap">
     <div class="applybox">
-      <h2>さあ、参加する日を選んでください</h2>
+      <h2>参加日程の選択</h2>
       <p>各回5名までの少人数です。参加する日を選んで、お申し込みください。お支払いのページへ移ります。</p>
     <form id="applyForm" novalidate>
       <div class="hp"><label>website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
@@ -563,6 +593,7 @@
         <button type="submit" class="pay paypal" data-method="PayPal" data-cta="pay-paypal">PayPalで支払う</button>
       </div>
       <p style="font-size:11.5px;margin-top:10px;">※Stripe：クレジットカード　※PayPal：PayPalアカウント・クレジットカード</p>
+      <p style="font-size:13.5px;margin-top:10px;">お支払いを確認したら、ZOOMのURLをメールでお送りします。当日はそのURLからお入りくださいね。</p>
       <div class="err" id="formErr"></div>
     </form>
     <div class="ok" id="payRedirect">
@@ -576,15 +607,16 @@
     </div>
     </div>
     <div class="card" id="contact" style="margin-top:22px">
-      <h3>わからないことは、教えてください</h3>
-      <p style="margin:0">school@iob.bio までお気軽にどうぞ。</p>
+      <h3>ご不明な点があれば、教えてください</h3>
+      <p style="margin:0">school@iob.bio まで、お気軽にご連絡くださいね。</p>
     </div>
   </div>
 </section>
 
+<!-- ===== 共感（申込欄のすぐ下）：読み手に「それ、私のこと」と思ってほしい → 声の吹き出し ===== -->
 <section class="s s-white" id="empathy">
   <div class="wrap">
-    <div class="head"><h2>お客さまの『なぜ？』に、<br>一瞬止まった方は<br>いませんか？</h2></div>
+    <div class="head"><h2>『なぜ？』と聞かれて、<br>一瞬止まった方は<br>いませんか？</h2></div>
     <div class="voices">
       <div class="voice"><i class="av"></i><div class="vb">生徒さんに質問されても、<br>きちんとした答えが出せませんでした。</div></div>
       <div class="voice r"><i class="av"></i><div class="vb">明確に自分の中で答えがなかった。<br>何と答えたらいいのかなというところを悩んでた。</div></div>
@@ -592,18 +624,20 @@
     </div>
     <p class="cap2">（これまで学んだ方の声です）</p>
     <div class="photo"><img src="img/stock/photo-1792736945966-d0c23e426648.jpg" alt="布の袋に入った色とりどりの野菜" loading="lazy"></div>
+    <p class="c" style="margin:6px 0 14px">実は、真剣に向き合ってきた人にも、<br>この一瞬は来ます。</p>
     <ul class="qcards">
       <li>オーガニックが好きで、仕事にしている。</li>
       <li>自分で選んだ商品やサービスにも、思いがある。</li>
       <li>勉強もしてきた。</li>
     </ul>
-    <p class="c">それなのに、お客さまに一歩踏み込んだ質問をされると、<b><span class="hl">うまく言葉にできない。</span></b></p>
+    <p class="c">それなのに、お客さまやスタッフ、家族に一歩踏み込んだ質問をされると、<b><span class="hl">うまく言葉にできない。</span></b></p>
     <p class="c">身体にいい、環境にやさしい。<br>そう答えたあとに<br>「なぜ、そう言えるんですか？」と聞かれて、<br>迷ってしまう。</p>
     <div class="pgrid g2"><img src="img/p_berries.jpg" alt="畑で一緒に実を摘む仲間たち" loading="lazy"><img src="img/p_saladbar.jpg" alt="ホテルの朝食に並ぶ野菜のサラダ" loading="lazy"></div>
     <div class="punch">大切にしてきた仕事だからこそ、<br>その価値をきちんと<br>伝えたいですよね。</div>
   </div>
 </section>
 
+<!-- ===== 結論と未来：「足りない所に気づく3時間」が背骨 → 暗い帯で立てる ===== -->
 <section class="s s-dark" id="root">
   <div class="wrap">
     <p class="c"><b>ただ、ちゃんと学んできた方にも、まだ知らないことが残っていることがあります。</b></p>
@@ -617,6 +651,7 @@
   </div>
 </section>
 
+<!-- ===== なぜ今：売り場の変化 → 3つの理由カード ===== -->
 <section class="s s-white" id="change">
   <div class="wrap">
     <div class="head"><span class="label">この数年で、変わったこと</span>
@@ -651,6 +686,7 @@
   </div>
 </section>
 
+<!-- ===== 答えに詰まる理由の正体：2つの問い → 村田さんの気づき ===== -->
 <section class="s s-cream" id="why">
   <div class="wrap">
     <div class="head"><h2>答えに詰まる、<br>理由の正体</h2></div>
@@ -679,6 +715,7 @@
   </div>
 </section>
 
+<!-- ===== 3時間で持ち帰る3つ＋覚悟（黄色の帯はここ1か所） ===== -->
 <section class="s s-yellow" id="take">
   <div class="wrap">
     <div class="head"><span class="label">3時間で、持ち帰れるもの</span>
@@ -687,16 +724,15 @@
     <ol class="ncards">
       <li>あなたに足りない<b>根拠</b>が、どこにあるのか見えます</li>
       <li><b>根拠を添えて答える型</b>を1つ、実際の質問で試せます</li>
-      <li>次に何を学べば、自信を持ってお客さまに伝えられるか、<b>見えてきます</b></li>
+      <li>次に何を学べば、自信を持って周りの人に伝えられるか、<b>見えてきます</b></li>
     </ol>
     <div class="photo"><img src="img/p_hills.jpg" alt="丘と村を見渡す景色" loading="lazy"></div>
     <div class="head sub"><h3>覚悟の育て方</h3></div>
     <p class="t"><b>知識がつながると、願いの輪郭が見えてきます。</b></p>
     <ul class="qcards">
-      <li>新しい事業を始める。</li>
-      <li>今の事業を組み立て直す。</li>
-      <li>仲間のいる場所に身を置く。</li>
-      <li>オーガニックで食べていく。</li>
+      <li>今の仕事で、専門性と伝える力を深める。</li>
+      <li>準備している新しい事業に、オーガニックを取り入れる。</li>
+      <li>同じ想いの仲間と、学び合う場に身を置く。</li>
     </ul>
     <p class="t lead2">願いはあるのに、なかなか手がつけられない。その手前にあるのが、「覚悟」です。</p>
     <p class="t">覚悟が決まらないのは、決めるための材料、つまり知識が、まだ手元にそろっていないからかもしれません。</p>
@@ -710,15 +746,39 @@
   </div>
 </section>
 
+<!-- ===== 受講生の変化（証拠） ===== -->
 <section class="s s-white" id="voices">
   <div class="wrap">
     <div class="head"><span class="label">学び続けた方たちのこと</span>
       <h2>学び続けた人たちの物語</h2></div>
     <p class="c">ここからは、この3時間とは別に、1年間のオーガニック専門家コースで学んだ方たちの声をご紹介します。</p>
     <p class="vcap">このセミナーで、すぐに同じ変化が起こるという意味ではありません。変化の大きさは、人それぞれです。</p>
-    <a class="ytcard" href="https://www.youtube.com/watch?v=OlyG-AKINbQ" target="_blank" rel="noopener" data-cta="yt-murata">
-      <span class="th"><img src="img/yt_murata.jpg" alt="村田枝里さんの対談動画" loading="lazy"></span>
-      <span class="tx"><b>村田枝里さん｜北海道・余市町の有機農家</b>「知識があるってことは、たくさんの選択肢の中から自分の人生を決めていける」<em>▶ 対談動画を見る（YouTube）</em></span></a>
+    <div class="ytwrap">
+      <p class="ytlead">お店、商品づくり、教室。<br>あなたに近い人の話から。</p>
+      <p class="ytg">お店を営む人</p>
+      <div class="ytlist">
+        <button type="button" class="ytm" data-yt="ah6qDS44X-Q" data-cta="yt-y01"><span class="th"><img src="img/yt_y01.jpg" alt="川田むつみさんの対談動画" loading="lazy"></span><span class="tx"><b>川田むつみさん</b><i>小売（オーガニックスーパー経営・取締役）</i>「ＩＯＢでの学びがなければ、いまの私の成功はありえなかったと断言できます。」</span></button>
+        <button type="button" class="ytm" data-yt="TpcaIA6MpjQ" data-cta="yt-y08"><span class="th"><img src="img/yt_y08.jpg" alt="野田寿美子さんの対談動画" loading="lazy"></span><span class="tx"><b>野田寿美子さん</b><i>小売・飲食（オフィス街のオーガニック店）／美容・健康の経営者</i>「専門家コースを受けてなかったらお店は絶対してなかったですね」</span></button>
+        <button type="button" class="ytm" data-yt="GYL2LT5ecak" data-cta="yt-y07"><span class="th"><img src="img/yt_y07.jpg" alt="山田愛実さんの対談動画" loading="lazy"></span><span class="tx"><b>山田愛実さん</b><i>小売・飲食（オーガニックサロン＋スーパーカフェ）／講師</i>「その苦手意識が外れてなんか手放せてなんかもうそこに飛び込んだらなんか解放された感があった」</span></button>
+        <button type="button" class="ytm" data-yt="PQUvv2M6yZY" data-cta="yt-y11"><span class="th"><img src="img/yt_y11.jpg" alt="矢野浩道さんの対談動画" loading="lazy"></span><span class="tx"><b>矢野浩道さん</b><i>小売（オーガニックスーパーのスタッフ）</i>「疑いから確信に変わってまた勉強することによって本当に自分に自信がついたり」</span></button>
+        <button type="button" class="ytm" data-yt="OChOwSxzXCM" data-cta="yt-y02"><span class="th"><img src="img/yt_y02.jpg" alt="猿田一生さんの対談動画" loading="lazy"></span><span class="tx"><b>猿田一生さん</b><i>美容室オーナー・日本サステナブルサロン協会 代表理事</i>「「ずっと、こんなサロンを探していた」と涙するお客様の姿を見たりしたときには、努力が報われたと感じました。」</span></button>
+      </div>
+      <p class="ytg">商品・食べものをつくる人</p>
+      <div class="ytlist">
+        <button type="button" class="ytm" data-yt="QDMWgjHvRaU" data-cta="yt-y10"><span class="th"><img src="img/yt_y10.jpg" alt="久松麻紀さんの対談動画" loading="lazy"></span><span class="tx"><b>久松麻紀さん</b><i>メーカー/商品開発（野生植物原料の健康食品・会社代表）</i>「オーガニックっていう考え方とセットで商品の説明ができるので…しっかりとやっぱりもう自信を持ってお話できる」</span></button>
+        <button type="button" class="ytm" data-yt="l-K9DIoWZYg" data-cta="yt-y09"><span class="th"><img src="img/yt_y09.jpg" alt="柳田夕希さんの対談動画" loading="lazy"></span><span class="tx"><b>柳田夕希さん</b><i>メーカー/商品開発（フルオーガニックの酵素ドリンク）／ピラティス講師</i>「入ってなかったら本当にビジネスも成り立たないですし」</span></button>
+        <button type="button" class="ytm" data-yt="OlyG-AKINbQ" data-cta="yt-murata"><span class="th"><img src="img/yt_murata.jpg" alt="村田枝里さんの対談動画" loading="lazy"></span><span class="tx"><b>村田枝里さん</b><i>生産者（ワインぶどう・野菜・家畜）／飲食・料理教室</i>「知識があるってことは、たくさんの選択肢の中から自分の人生を決めていける」</span></button>
+        <button type="button" class="ytm" data-yt="g5SsI_LQb3Q" data-cta="yt-y03"><span class="th"><img src="img/yt_y03.jpg" alt="田中優介さんの対談動画" loading="lazy"></span><span class="tx"><b>田中優介さん</b><i>生産者（自然農の米づくり・農業法人を設立中）／経営コンサル</i>「だからこの選択をしたんだっていうことが説明できるようになったてのはすごい大きな成果だと思ってます」</span></button>
+        <button type="button" class="ytm" data-yt="vLFB0WKrulA" data-cta="yt-y04"><span class="th"><img src="img/yt_y04.jpg" alt="古谷栄樹さんの対談動画" loading="lazy"></span><span class="tx"><b>古谷栄樹さん</b><i>生産者（愛媛で農業・大阪で販売）</i>「その大阪で今活動してるスクールの方に買っていただいたりとか、取り扱っていただいたりと」</span></button>
+      </div>
+      <p class="ytg">教える・伝える人</p>
+      <div class="ytlist">
+        <button type="button" class="ytm" data-yt="hBM6TNmnu30" data-cta="yt-y13"><span class="th"><img src="img/yt_y13.jpg" alt="ビルケルト恵さんの対談動画" loading="lazy"></span><span class="tx"><b>ビルケルト恵さん</b><i>講師（ドイツで味噌づくり講座）＋メーカー/商品開発</i>「資格を得たことでさらにもっとこう飛躍的にあのドイツでも日本でも仕事ができる場所が広がった」</span></button>
+        <button type="button" class="ytm" data-yt="UYamCvGDoW0" data-cta="yt-y05"><span class="th"><img src="img/yt_y05.jpg" alt="上鶴恵子さんの対談動画" loading="lazy"></span><span class="tx"><b>上鶴恵子さん</b><i>小売（自然食品店）／講師</i>「ちゃんと伝えればこんなに理解者が増えるんだっていうことだった」</span></button>
+        <button type="button" class="ytm" data-yt="W8xM_UIhfYI" data-cta="yt-y06"><span class="th"><img src="img/yt_y06.jpg" alt="森奈央さんの対談動画" loading="lazy"></span><span class="tx"><b>森奈央さん</b><i>小売（量り売りのオーガニック店）／講師</i>「あ、私も何かできることで協力をしたいですっていうことでお声をいただいてます」</span></button>
+      </div>
+      <p class="ytnote">※ご本人の言葉を、そのまま載せています（川田さん・猿田さんは著書の体験談から）。</p>
+    </div>
     <div class="tcards">
       <div><b>店頭に立つ受講生</b>
         <p>「お客様から『オーガニックって何ですか？』と尋ねられるたびに、自信を持って答えることができず」「頭真っ白になった」</p>
@@ -730,11 +790,11 @@
         <p>「お客様に間違った情報を伝えているのでは…と不安がありました」</p>
         <p style="margin-top:8px">→ 根拠を持って話せるようになり、より深い講座ができるように。</p></div>
     </div>
-    <div class="photo"><img src="img/kyoudou-meet.jpg" alt="オンラインで一緒に学ぶスクール生たち" loading="lazy"></div>
-    <p class="c small">変化の大きさは、人それぞれです。</p>
+    <div class="photo"><img src="img/p_hakodate2025_group.jpg" alt="2025年10月、函館での催しに集まった方たち" loading="lazy"></div>
   </div>
 </section>
 
+<!-- ===== プロフィール（新規） ===== -->
 <section class="s s-cream" id="profile">
   <div class="wrap">
     <div class="head"><span class="label">はじめまして</span>
@@ -749,10 +809,11 @@
       <li>朝日新聞社共催「ビオファジャパン」第1回の立ち上げから企画・実施（2024年）</li>
       <li>初著書『社会のために生きたいあなたへ　オーガニック入門書』（2024年）Amazon Kindle総合ランキング1位を含む13部門で1位</li>
     </ul>
-    <p class="c"><b>売り場や教室で、お客さまに答える人たちに、根拠の渡し方を伝えてきました。</b></p>
+    <p class="c"><b>オーガニックを人に伝える立場の人たちに、根拠の渡し方を伝えてきました。</b></p>
   </div>
 </section>
 
+<!-- ===== 原点：なぜ根拠を伝え続けるのか ===== -->
 <section class="s s-white" id="belief">
   <div class="wrap">
     <div class="head"><h2>なぜ私は、<br>『根拠』を伝え続けるのか</h2></div>
@@ -772,7 +833,7 @@
     </div>
     <div class="punch">教育は、<br><span class="hl">すべての土台</span>です。</div>
     <div class="blk plain">
-      <p class="t">自分自身が正しく理解していなければ、お客さまに、選ぶための知識を手渡すことはできません。</p>
+      <p class="t">自分自身が正しく理解していなければ、周りの人に、選ぶための知識を手渡すことはできません。</p>
       <p class="t">オーガニックの企業を何百、何千と見てきて、はっきり言えることがあります。知識をきちんと伝えている会社には、お客さまがファンとして集まっていました。仲間ができ、社員が集まり、取引先も応援してくれていました。</p>
     </div>
     <div class="photo"><img src="img/p_lake.jpg" alt="湖のほとりで過ごす仲間たち" loading="lazy"></div>
@@ -788,6 +849,7 @@
   </div>
 </section>
 
+<!-- ===== 参加ガイド ===== -->
 <section class="s s-cream" id="detail">
   <div class="wrap">
     <div class="head"><h2>当日の参加ガイド</h2></div>
@@ -802,89 +864,76 @@
     <div class="photo"><img src="img/stock/photo-1510922903530-28ecf3f00362.jpg" alt="ノートとペン、コーヒー" loading="lazy"></div>
     <div class="head sub"><h3>こんな方に向いています</h3></div>
     <ul class="dots">
-      <li>お店・教室・相談・生産の場で、オーガニックをお客さまに伝えている方</li>
+      <li>お店・教室・商品づくり・生産など、オーガニックに関わる仕事をしている方</li>
       <li>思いはあるのに、根拠を持って説明しきれないと感じている方</li>
       <li>これから何を学べばいいか、自分で選びたい方</li>
     </ul>
-    <div class="head sub"><h3>3時間の歩き方</h3></div>
-    <ol class="steps">
-      <li>「今日はどうなっていたい？」をチャットに書く</li>
-      <li>2つの問いに答えてみる</li>
-      <li>足りない根拠がどこにあるか、気づく</li>
-      <li>答え方の型を1つ試す</li>
-      <li>受講生の変化を知る</li>
-      <li>半年後、お客さまの前で話している自分の場面を描く</li>
-      <li>最後に、このあとの学びと個別相談のご案内が少しあります（希望した方だけ、その場で個別相談の日を決められます）</li>
-    </ol>
     <div class="pgrid g2"><img src="img/p_terrace.jpg" alt="テラスで笑い合う仲間たち" loading="lazy"><img src="img/p_tour2026_toast.jpg" alt="ツアー2026でテーブルを囲む仲間たち" loading="lazy" style="object-position:0% 50%"></div>
-    <div class="head sub"><h3>申し込みは、3ステップ</h3></div>
-    <ol class="steps">
-      <li>上のフォームで、参加する日を選ぶ</li>
-      <li>Stripe か PayPal で、参加費をお支払いいただく</li>
-      <li>お支払いを確認したら、参加のURLをメールでお送りします</li>
-    </ol>
   </div>
 </section>
 
+<!-- ===== オファー ===== -->
 <section class="s s-orange" id="offer">
   <div class="wrap">
     <div class="punch">足りない知識に気づき、<br>根拠を持って答えはじめる。<br>そのための3時間です。</div>
-    <p class="c"><b>参加費は、日本にお住まいの方 €8／欧州にお住まいの方 €9。</b></p>
-    <p class="c">年内にお話しできる回は、12/6と12/16の2回。各回5名です。</p>
     <div class="photo"><img src="img/stock/photo-1741271398766-32a52ffd1e4e.jpg" alt="ペンを持ち、ノートに書きものをする女性" loading="lazy"></div>
-    <p class="c">夜の3時間、取れるかなと思う方もいらっしゃると思います。<br>この3時間でやるのは、<span class="hl">足りない根拠を見つけて、答え方の型を1つ試す</span>ところまでです。</p>
     <a class="cta" href="#apply" data-cta="offer">参加する日を選んで、申し込む</a>
     <p class="c small">お支払いを確認したら、参加のURLをメールでお送りします。</p>
   </div>
 </section>
 
+<!-- ===== FAQ ===== -->
 <section class="s s-white" id="faq">
   <div class="wrap faq">
     <div class="head"><h2>申し込む前に、<br>よくいただくご質問</h2></div>
-    <details open><summary>どんな人が参加できますか？</summary><div class="ans">お店に立つ方、教室や講座を開く方、販売や相談の仕事をしている方など、オーガニックを仕事で人に伝えている方です。</div></details>
-    <details><summary>仕事が忙しく、学ぶ時間がとれるか不安です。</summary><div class="ans">このセミナーは3時間です。このあと学ぶオーガニック専門家コースも、動画を見る時間は月3時間ほどが目安です（復習や試験の準備、毎月1時間の共同学習会は別です）。</div></details>
-    <details><summary>資格は必要ですか？</summary><div class="ans">資格のための場ではありません。お仕事で、お客さまの質問に答えるために使える知識を目指します。</div></details>
-    <details><summary>このあと、学び続けたいと思ったら？</summary><div class="ans">このセミナーに参加しても、コースへのお申し込みは必要ありません。学び続けたい方には、オーガニック専門家コースがあります。次の開講は2027年1月中旬、メールレッスンと共同学習会から始まります。受講料は税込€2,450です（3回払いは手数料なし／10回払いは手数料あり）。毎月1時間の共同学習会があり、新しく入る方は1年間、勉強しながら相談もできるコミュニティに参加できます。学ぶ速さには個人差があります。</div></details>
-    <details><summary>希望の日が満席のときは？</summary><div class="ans">もう一方の日にご参加いただけます。どちらも難しいときは、school@iob.bio までご相談ください。</div></details>
+    <details open><summary>どんな人が参加できますか？</summary><div class="ans">お店や教室、商品づくり、生産、会社のスタッフなど、立場を問わず、オーガニックに関わる仕事をしている方です。</div></details>
+    <details><summary>当日はどうやって参加しますか？</summary><div class="ans">お支払いを確認したら、ZOOMのURLをメールでお送りします。当日はそのURLからお入りください。</div></details>
+    <details><summary>スマホでも参加できますか？</summary><div class="ans">はい。ZOOMが使えるスマートフォンかパソコンがあれば参加できます。</div></details>
+    <details><summary>うまく話せるか心配です。</summary><div class="ans">言葉がすぐに出てこないときは、チャットに書くだけでも大丈夫です。</div></details>
+    <details><summary>お支払いの方法は？</summary><div class="ans">クレジットカード（Stripe）か、PayPalでお支払いいただけます。</div></details>
+    <details><summary>希望の日が満席のときは？</summary><div class="ans">もう一方の日に空きがあれば、そちらにご参加いただけます。</div></details>
   </div>
 </section>
 
+<!-- ===== 最後のひと言・ボタン・追伸 ===== -->
 <section class="s s-cream" id="final">
   <div class="wrap">
-    <div class="punch">次にお客さまに<br>「オーガニックって何ですか？」<br>と聞かれたとき、<br>あなたの言葉で答えはじめる。<br>その一歩目が、ここにあります。</div>
+    <div class="punch">次に誰かに<br>「オーガニックって何ですか？」<br>と聞かれたとき、<br>あなたの言葉で答えはじめる。<br>その一歩目が、ここにあります。</div>
     <a class="cta" href="#apply" data-cta="final">参加する日を選んで、申し込む</a>
     <div class="photo" style="margin-top:34px"><img src="img/p_tour2026_group.jpg" alt="ツアー2026の仲間との集合写真" loading="lazy" style="object-position:50% 62%"></div>
     <div class="letter">
       <p class="lc"><b>追伸</b></p>
-      <p>私たち事業者の後ろには、たくさんのお客さまがいます。<b><span class="hl">だからこそ、根拠を持って伝える人を増やしたい。</span></b></p>
-      <p>それが、私がスクールを続けている理由です。</p>
+      <p>私が目指しているのは、オーガニックが、ひとつの選択として当たり前のようにある社会です。</p>
+      <p>その社会には、私たち事業者の一人ひとりの一歩一歩で近づいていく。そう信じています。</p>
+      <p>だからこそ、事業者一人ひとりが物心ともに豊かであることが大事だと、強く信じています。</p>
+      <p><b><span class="hl">あなたの成功は、正しい。</span></b></p>
     </div>
   </div>
 </section>
 
 <div id="stickyCta"><a href="#apply" data-cta="sticky">参加する日を選んで、申し込む</a></div>
-<footer><div>© <span id="y"></span> Institut für Organic Business GmbH</div><div style="margin-top:4px;font-size:11px">一部の写真：Unsplash</div></footer>
+<footer><div>© <span id="y"></span> Institut für Organic Business GmbH</div></footer>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 
-  
+  /* ▼ ファーストビューの見出し案（?fv=1/2/3）。比べるとき用。既定＝2 */
   var FV = {
     "2": '<span class="sl">＼</span>なぜ、<span class="sl">／</span><br><span class="nw"><span class="k">「感覚」</span>だけで伝えるのを</span><br><span class="nw">やめたら</span><br><span class="nw"><span class="q">お客さまが聞きに来る</span></span><br><span class="nw">ようになったのか？</span>',
     "3": '<span class="sl">＼</span>なぜ、<span class="sl">／</span><br><span class="nw">オーガニックが<span class="k">大好き</span>なのに</span><br><span class="nw"><span class="q">お客さまに</span></span><br><span class="nw"><span class="q">伝わりきらない</span>のか？</span>'
   };
   (function(){ var n = new URLSearchParams(location.search).get("fv"); if (FV[n]) document.getElementById("fvH1").innerHTML = FV[n]; })();
 
-  
+  /* ▼ 受付GAS（ドリル申込受付_2026 の同じプロジェクトに体験セミナー用の受け口を追加） */
   var GAS_URL = "https://script.google.com/macros/s/AKfycbx_zH661VTJPssyVZNmvvt2iCzvHmuYeLeee2ARXN9ZlxQ6LMxsSJltYoltGyLD8_eAZQ/exec";
-  
+  /* 決済リンク（2026-11-09 佳代子さん作成・アーニャが金額を開いて確認済み） */
   var PAY_LINKS = {
     JP: { Stripe: "https://buy.stripe.com/8x25kE3In2Ak8u5a6T1kA1o", PayPal: "https://www.paypal.com/ncp/payment/R9V5QNVFRXPHC" },
     EU: { Stripe: "https://buy.stripe.com/aFa6oIbaP8YIh0Bgvh1kA1p", PayPal: "https://www.paypal.com/ncp/payment/HTYBW6V6FSPVU" }
   };
   function isReal(u){ return typeof u === "string" && u.indexOf("http") === 0; }
 
-  
+  /* ▼ 流入元（?src=）。自分の確認は ?src=me（集計から外す） */
   var SRC = (function(){
     var s = (new URLSearchParams(location.search).get("src") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 20);
     try { if (s) sessionStorage.setItem("iobts_src", s); else s = sessionStorage.getItem("iobts_src") || ""; } catch (e) {}
@@ -892,7 +941,7 @@
   })();
   var FVN = (new URLSearchParams(location.search).get("fv") || "1").slice(0, 2);
 
-  
+  /* ▼ インサイト計測（常時）。個人が分かる情報は送らない（訪問者IDはランダム文字） */
   var VID = (function(){ try { var v = localStorage.getItem("iobts_vid"); if (!v) { v = Math.random().toString(36).slice(2, 10); localStorage.setItem("iobts_vid", v); } return v; } catch (e) { return ""; } })();
   var LAST_CTA = (function(){ try { return sessionStorage.getItem("iobts_cta") || ""; } catch (e) { return ""; } })();
   var ENTRY_CTA = (function(){ try { return sessionStorage.getItem("iobts_entry") || ""; } catch (e) { return ""; } })();
@@ -920,7 +969,7 @@
     if (!sc90 && r >= 0.9) { sc90 = true; track("scroll90"); }
   }, { passive: true });
 
-  
+  /* ▼ 追従ボタン（スマホ） */
   (function(){
     var bar = document.getElementById("stickyCta"), sec = document.getElementById("apply");
     function update(){
@@ -934,7 +983,7 @@
     update();
   })();
 
-  
+  /* ▼ 締切を過ぎた回は選べないようにする（日本時間の締切日の23:59まで） */
   (function(){
     var close = { "2026-12-06": "2026-12-04T23:59:59+09:00", "2026-12-16": "2026-12-14T23:59:59+09:00" };
     [].slice.call(form.querySelectorAll('input[name=date]')).forEach(function(r){
@@ -942,7 +991,7 @@
     });
   })();
 
-  
+  /* ▼ 申込：記録（お名前・回・地域・メール・支払い方法・流入元・押したボタン）→ 決済ページへ */
   var errBox = document.getElementById("formErr");
   function showErr(m){ errBox.textContent = m; errBox.style.display = "block"; }
   form.addEventListener("submit", function(e){
@@ -984,6 +1033,16 @@
     el.appendChild(w);
   });
 })();
+</script>
+<div class="ytmodal" id="ytModal" role="dialog" aria-label="受講生の対談動画"><button type="button" class="x" aria-label="閉じる">×</button><div class="box"></div></div>
+<script>
+(function(){var m=document.getElementById('ytModal'),b=m.querySelector('.box');
+function close(){m.classList.remove('on');b.innerHTML='';}
+document.querySelectorAll('button.ytm').forEach(function(el){el.addEventListener('click',function(){
+b.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+el.getAttribute('data-yt')+'?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="受講生の対談動画"></iframe>';
+m.classList.add('on');});});
+m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('x'))close();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();
 </script>
 </body>
 </html>
