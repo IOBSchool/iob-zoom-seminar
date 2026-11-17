@@ -19,6 +19,7 @@
   ■ 計測：view / cta / form_start / scroll。?src=○○で流入元、?fv=1/2/3で見出し案。自分の確認は ?src=me
   ■ 写真：img/natsuko-portrait.jpg・img/kyoudou-meet.jpg（自前）／img/stock は Unsplash（drill-apply と同じもの）
     <div class="pgrid g3"><img src="img/p_piano.jpg" alt="ピアノのある部屋で集まった仲間たち" loading="lazy"><img src="img/p_cooking.jpg" alt="みんなで料理をするワークショップ" loading="lazy"><img src="img/p_artroom.jpg" alt="アトリエで制作を楽しむ参加者" loading="lazy"></div>
+    <p class="pcap">ピアノのある部屋で集まった仲間たち／みんなで料理をするワークショップ／アトリエで制作を楽しむ参加者</p>
 -->
 <style>
   :root{
@@ -502,6 +503,9 @@
   .letter .lc{font-family:"Noto Serif JP",serif;font-size:17.5px;line-height:1.8;color:var(--ink);background:var(--yellow-soft);border-radius:12px;padding:14px 14px;margin:20px 0 !important;}
   .letter .lg{border-top:1px dashed var(--tan-line);padding-top:16px;}
   /* ---- 写真の組み（2枚並び・3枚の帯） ---- */
+  .pcap{font-size:12px;line-height:1.6;color:var(--brown-mid);text-align:center;margin:-22px 0 30px;padding:0 6px;}
+  .pgrid + .pcap{margin:-24px 0 30px;}
+  .fvcap{margin:8px 0 12px;padding:0 16px;}
   .pgrid{display:grid;gap:8px;margin:8px 0 34px;border-radius:18px;overflow:hidden;}
   .pgrid.g2{grid-template-columns:1fr 1fr;}
   .pgrid.g3{grid-template-columns:repeat(3,1fr);gap:4px;}
@@ -553,6 +557,7 @@
     <img src="img/hall_audience.jpg" alt="講演会の会場の皆さんと">
     <img src="img/pair_2019_jp.jpg" alt="日本のツアーの集合写真">
   </div>
+  <p class="pcap fvcap">講演会・講座・ツアーなど、IOBの活動の写真です（左から：講演会で登壇するレムケなつこ／ツアーの仲間との集合写真／講座で話すレムケなつこ／北海道ツアーの集合写真／講演会の会場の皆さんと／日本のツアーの集合写真）</p>
   <div class="ycs-cta"><a class="cta" href="#apply" data-cta="fv">参加する日を選んで、申し込む</a></div>
 </header>
 
@@ -633,6 +638,7 @@
     <p class="c">それなのに、お客さまやスタッフ、家族に一歩踏み込んだ質問をされると、<b><span class="hl">うまく言葉にできない。</span></b></p>
     <p class="c">身体にいい、環境にやさしい。<br>そう答えたあとに<br>「なぜ、そう言えるんですか？」と聞かれて、<br>迷ってしまう。</p>
     <div class="pgrid g2"><img src="img/p_berries.jpg" alt="畑で一緒に実を摘む仲間たち" loading="lazy"><img src="img/p_saladbar.jpg" alt="ホテルの朝食に並ぶ野菜のサラダ" loading="lazy"></div>
+    <p class="pcap">畑で一緒に実を摘む仲間たち／ホテルの朝食に並ぶ野菜のサラダ</p>
     <div class="punch">大切にしてきた仕事だからこそ、<br>その価値をきちんと<br>伝えたいですよね。</div>
   </div>
 </section>
@@ -645,6 +651,7 @@
     <div class="punch">足りない知識に気づき、<br>根拠を整理して、<br>自分の言葉で伝えていく。<br>この3時間は、その第一歩です。</div>
     <p class="c">根拠が添うと、お客さまは納得して、<span class="hl">選びやすくなります。</span></p>
     <div class="photo"><img src="img/p_artroom.jpg" alt="アトリエで制作を楽しむ参加者" loading="lazy"></div>
+    <p class="pcap">アトリエで制作を楽しむ参加者</p>
     <p class="c"><b>次に同じことを聞かれたとき、以前とは違う説明ができるように。</b></p>
     <p class="c">実際の質問を使って、答え方の型を1つ、その場で練習します。</p>
     <a class="cta" href="#apply" data-cta="empathy">参加する日を選んで、申し込む</a>
@@ -659,6 +666,7 @@
     <div class="quote">「いいものなら、<br>分かる人には伝わる」</div>
     <p class="c">オーガニックの仕事をしていると、<br>一度はそう思いますよね。<br>でも今は、それだけでは<br>伝わりにくくなっています。</p>
     <div class="photo"><img src="img/p_barn.jpg" alt="ドイツの伝統的な農家の納屋と牧草地" loading="lazy"></div>
+    <p class="pcap">ドイツの伝統的な農家の納屋と牧草地</p>
     <div class="blk">
       <h3 class="sh">オーガニックの売り場は、<br>変わった</h3>
       <p class="t">以前は、限られたお店でしか手に入らなかったオーガニック。</p>
@@ -667,6 +675,7 @@
       <p class="t call">ただ、売る側から見ると、値段で比べられる場面が増えています。</p>
     </div>
     <div class="photo"><img src="img/p_biofach2024.jpg" alt="オーガニックの見本市で出展者に話を聞く" loading="lazy" style="object-position:50% 30%"></div>
+    <p class="pcap">2024年2月、ドイツのオーガニック見本市「ビオファ」で出展者に話を聞く</p>
     <div class="blk">
       <h3 class="sh">『なんとなく良さそう』で<br>選ばれる時代</h3>
       <div class="pills"><span>「ナチュラルっぽい」</span><span>「オーガニックっぽい」</span><span>「身体によさそう」</span></div>
@@ -677,6 +686,7 @@
       <p class="t">その「伝え切る」を、一人で抱えなくていいように、この3時間があります。</p>
     </div>
     <div class="pgrid g3"><img src="img/p_barnclass.jpg" alt="ドイツの納屋で学ぶ講座の様子" loading="lazy"><img src="img/p_gardentalk.jpg" alt="畑の前で話を聞く仲間たち" loading="lazy"><img src="img/p_workshop.jpg" alt="仲間と一緒に手を動かすワークショップ" loading="lazy"></div>
+    <p class="pcap">ドイツの納屋で学ぶ講座の様子／畑の前で話を聞く仲間たち／仲間と一緒に手を動かすワークショップ</p>
     <div class="blk">
       <h3 class="sh">『あなたから買いたい』と<br>言われる決め手</h3>
       <p class="t">これから大切になるのは、値段で選んでもらうことではありません。</p>
@@ -710,6 +720,7 @@
     </div>
     <div class="quote">「本当多分1%、2%ぐらいしか<br>知らなかったんじゃないかな」<small>（村田枝里さん／北海道・余市町）</small></div>
     <div class="photo"><img src="img/p_hokkaido2024.jpg" alt="北海道の麦畑での集合写真" loading="lazy"></div>
+    <p class="pcap">北海道の麦畑での集合写真</p>
     <p class="c">オーガニックへの思いも、学ぼうとする意欲もあった。<br>それでも、まだ知らない世界があった。</p>
     <p class="c"><b>そこに気づくことが、<span class="hl">新しい学びの第一歩</span>になるのだと思います。</b></p>
   </div>
@@ -727,6 +738,7 @@
       <li>次に何を学べば、自信を持って周りの人に伝えられるか、<b>見えてきます</b></li>
     </ol>
     <div class="photo"><img src="img/p_hills.jpg" alt="丘と村を見渡す景色" loading="lazy"></div>
+    <p class="pcap">丘と村を見渡す景色</p>
     <div class="head sub"><h3>覚悟の育て方</h3></div>
     <p class="t"><b>知識がつながると、願いの輪郭が見えてきます。</b></p>
     <ul class="qcards">
@@ -738,6 +750,7 @@
     <p class="t">覚悟が決まらないのは、決めるための材料、つまり知識が、まだ手元にそろっていないからかもしれません。</p>
     <p class="t push">私は、この3時間を、<b>自分で自分の背中を押せる時間</b>にしたいと思って組んでいます。</p>
     <div class="photo"><img src="img/p_online_class.jpg" alt="オンライン講座で笑顔の受講生たち" loading="lazy"></div>
+    <p class="pcap">オンライン講座で笑顔の受講生たち</p>
     <div class="blk plain">
       <p class="t">覚悟とは、無理に大きな決断をすることではありません。自分が大切にしたいことを確かめ、次に何をするかを、自分で選ぶこと。</p>
       <p class="t">選んだことを実践して、また次を選ぶ。そしてその繰り返しの中で、結果がついてくるものだと私は思います。</p>
@@ -785,6 +798,7 @@
         <p style="margin-top:8px">→ 根拠を持って話せるようになり、より深い講座ができるように。</p></div>
     </div>
     <div class="photo"><img src="img/p_hakodate2025_group.jpg" alt="2025年10月、函館での催しに集まった方たち" loading="lazy"></div>
+    <p class="pcap">2025年10月、函館での催しに集まった方たち</p>
   </div>
 </section>
 
@@ -814,14 +828,19 @@
     <div class="letter">
       <p>ドイツに暮らして約17年、オーガニック教育の仕事をしています。</p>
     <div class="photo"><img src="img/p_meadow.jpg" alt="ドイツの農家の牧草地で話を聞く参加者" loading="lazy"></div>
+    <p class="pcap">ドイツの農家の牧草地で話を聞く参加者</p>
       <p>始まりは、青年海外協力隊で行った南米ボリビアでした。出稼ぎの人たちが、現代の奴隷のように働かされている。その現実を、見たのです。</p>
     <div class="pgrid g2"><img src="img/p_bolivia2.jpg" alt="ボリビアの荒れた土地に暮らす人" loading="lazy"><img src="img/p_bolivia5.jpg" alt="サトウキビ畑で働く人" loading="lazy"></div>
+    <p class="pcap">ボリビアの荒れた土地に暮らす人／サトウキビ畑で働く人</p>
       <p class="lg">日本に帰ってから、気づきました。その人たちが作ったサトウキビ、つまり白砂糖を、私も毎日使っていた。私も、あの現実に加わっていたのだと。</p>
     <div class="photo"><img src="img/p_bolivia1.jpg" alt="サトウキビの刈り取りの合間に休む人たち" loading="lazy"></div>
+    <p class="pcap">サトウキビの刈り取りの合間に休む人たち</p>
       <p>なんとかしたい。その一心で論文を読みあさり、出会ったのが「オーガニック」という仕組みでした。2009年にドイツへ渡り、大学院で学びました。</p>
     <div class="photo"><img src="img/p_house.jpg" alt="ドイツの伝統的な農家の家" loading="lazy"></div>
+    <p class="pcap">ドイツの伝統的な農家の家</p>
       <p class="lc"><b>オーガニックは、関わるすべての命が幸せでいられるための仕組みです。</b></p>
     <div class="photo"><img src="img/p_smiles.jpg" alt="芝生に寝転んで笑顔を寄せ合う仲間たち" loading="lazy"></div>
+    <p class="pcap">芝生に寝転んで笑顔を寄せ合う仲間たち</p>
       <p>だからこそ、伝える人に、根拠を持っていてほしい。<span class="hl">伝える人が自信を持てた分だけ、オーガニックは広がっていく</span>からです。</p>
       <div class="sign">レムケなつこ</div>
     </div>
@@ -831,6 +850,7 @@
       <p class="t">オーガニックの企業を何百、何千と見てきて、はっきり言えることがあります。知識をきちんと伝えている会社には、お客さまがファンとして集まっていました。仲間ができ、社員が集まり、取引先も応援してくれていました。</p>
     </div>
     <div class="photo"><img src="img/p_lake.jpg" alt="湖のほとりで過ごす仲間たち" loading="lazy"></div>
+    <p class="pcap">湖のほとりで過ごす仲間たち</p>
     <p class="c"><b>だから私は、あなたの先にいるお客さまにまで知識が届くように、スクールをやっています。</b></p>
     <div class="blk dk">
       <h3 class="sh">選ばれ続ける、<br>3つのカギ</h3>
@@ -840,6 +860,7 @@
       <p class="t">この3時間で最初に扱うのは、<b><span class="hl">①正しい知識</span></b>です。</p>
     </div>
     <div class="pgrid g2"><img src="img/p_piano.jpg" alt="ピアノのある部屋で集まった仲間たち" loading="lazy"><img src="img/p_cooking.jpg" alt="みんなで料理をするワークショップ" loading="lazy"></div>
+    <p class="pcap">ピアノのある部屋で集まった仲間たち／みんなで料理をするワークショップ</p>
   </div>
 </section>
 
@@ -863,6 +884,7 @@
       <li>これから何を学べばいいか、自分で選びたい方</li>
     </ul>
     <div class="pgrid g2"><img src="img/p_terrace.jpg" alt="テラスで笑い合う仲間たち" loading="lazy"><img src="img/p_tour2026_toast.jpg" alt="ツアー2026でテーブルを囲む仲間たち" loading="lazy" style="object-position:0% 50%"></div>
+    <p class="pcap">テラスで笑い合う仲間たち／ツアー2026でテーブルを囲む仲間たち</p>
   </div>
 </section>
 
@@ -895,6 +917,7 @@
     <div class="punch">次に誰かに<br>「オーガニックって何ですか？」<br>と聞かれたとき、<br>あなたの言葉で答えはじめる。<br>その一歩目が、ここにあります。</div>
     <a class="cta" href="#apply" data-cta="final">参加する日を選んで、申し込む</a>
     <div class="photo" style="margin-top:34px"><img src="img/p_tour2026_group.jpg" alt="ツアー2026の仲間との集合写真" loading="lazy" style="object-position:50% 62%"></div>
+    <p class="pcap">ツアー2026の仲間との集合写真</p>
     <div class="letter">
       <p class="lc"><b>追伸</b></p>
       <p>私が目指しているのは、オーガニックが、ひとつの選択として当たり前のようにある社会です。</p>
